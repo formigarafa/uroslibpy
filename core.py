@@ -59,6 +59,8 @@ class Topic:
         self._name = name
         self._message_type = message_type
         self._compression = compression
+        if self._compression is None:
+            self._compression = 'none'
         self._latch = latch
         self._throttle_rate = throttle_rate
         self._queue_size = queue_size
